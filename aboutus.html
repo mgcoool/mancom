@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <!-- Bootstrap CSS -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles/aboutus.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+      <style type="text/css">
+           .backimage
+        {
+        background-image: url("styles/image/background.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+     .nav-link, a
+     {
+     color:black;
+     }
+  
+       </style>
+       
+
+        <!--Accordion function-->
+        <script>
+            $(function ()
+            {
+              $( "#accordion" ).accordion();
+            } );
+            </script>
+        <!--Read More Function-->
+        <script>$(document).ready(function () {
+    $('.nav-toggle').click(function () {
+        var collapse_content_selector = $(this).attr('href');
+        var toggle_switch = $(this);
+        $(collapse_content_selector).toggle(function () {
+            if ($(this).css('display') == 'none') {
+                toggle_switch.html('Read More');
+            } else {
+                toggle_switch.html('Read Less');
+            }
+        });
+    });
+
+});
+     </script>
+    </head>
+    <body>
+         
+        <!--Navigatin bar-->
+        <nav class="navbar navbar-expand-lg navbar-static-top fade-show navbar-light bg-light" id="navbar">
+            <a class="navbar-brand mx-4" href="#">
+                <img src=img/imageslogo.png width="110" height="60" alt="logo">
+               </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul class="navbar-nav mx-auto ">
+                    <li class="nav-item">
+                        <a class="nav-link mx-4 h4" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                     <li class="nav-item active">
+                     <a class="nav-link mx-4  h4" href="aboutus.html">About Us</a>
+                   </li>
+                     <li class="nav-item">
+                        <a class="nav-link mx-4  h4" href="Services.html">Services</a>
+                    </li>
+                 <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle mx-4  h4" href="#" id="navbardropdown" role="menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Projects
+                     </a>
+                     <div class="dropdown-menu" aria-labelledby="navbardropdown">
+                         <a class="dropdown-item text-justify" href="Product.aspx"><img class="pr-2" src="img/diamond5.png" height="25px" width="25px" />Diamond Cutting</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/Bangle1.jpg" height="25px" width="25px" />Bangle Design</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/dnb.png" height="25px" width="25px" />DNB</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/phmeter.png" height="25px" width="25px" />Phmeter</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/image_proc.jpg" height="25px" width="25px" />Image Processing</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/npwt.png" height="25px" width="25px" />NPWT Instrument</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/hdmi.jpg" height="25px" width="25px" />HDMI Security</a>
+                         <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/gps.png" height="25px" width="25px" />GPS Lock</a>
+                     </div>
+                 </li>
+                    <li class="nav-item">
+                     <a class="nav-link mx-4  h4" href="Contactus.aspx" >Contact Us</a>
+                    </li>
+              </ul>
+         </div>
+      </nav>
+        <div class="backimage container-fluid" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <h2 class="aboutus-title text-info" style="padding-top:40px;">About Us</h2>
+                        <p class="aboutus-text text-justify" >Incepted in the year 2007, Pacecon Technosys Pvt. Ltd. is a leading organization indulged in providing a wide variety of Service Provider to our customers. In line with the needs of our customers, some of the chief services delivered by our personnel include Visitor Management Software, Embedded Systems Research, Education Training Service, Website Development Service, Software Development Service, School Notice Board Software and Digital Notice Board Software. Available with us at most economical rates, these services are delivered by most talented personnel; these offered services are appreciated for their reliability and economical pricing structure. Besides this, these can be customized as per the differentiated needs of our clients to gain their trust and credibility.</p>
+                        
+                        <div id="collapse" style="display:none">
+                            <p class="aboutus-text text-justify">Team plays an important role in the functionality of any organization thus, to carry out all our business activities and operations in a trouble free manner, we have hired with us a dexterous and qualified team of personnel who are versed with the understanding and familiarity of this domain. Hired from some of the most talented and 
+                            qualified personnel present in their market, these are examined on the parameter of their skills and knowledge to get selected. Besides this, all the personnel in our team are working in close harmony with one another to maintain coordination and steadiness in our organization. This in turn has assisted us in attaining a huge clients support across the nation.
+                            Since we have incepted in this industry, all our business operations are taking place under the direction and management of Mr. Parag Sheth. His strong business acumen and understanding of this field has assisted us in garnering a huge customer support across the industry.</p>
+                        </div>
+                        <a href="#collapse" class="nav-toggle text-danger">Read More</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="aboutus-banner"style="padding-top:40px;">
+                            <img src="styles/image/b1.jpg" alt="" height="400" width="100%">
+                        </div>
+                    </div>
+                </div>
+                <h4 class="text-light text-center"  style="font-style:oblique;font-family:'Segoe UI';font-size:25px;font-feature-settings:normal;">"Why Choose Pacecon Technosys"</h4>
+                <div class="container-fluid">
+                    <div id="accordion">
+                        <h3 style="background-color:#007fff; font:bold 20px Georgia,serif;">Work With heart</h3>
+                        <div>
+                            <p class="text-justify">
+                               <!-- Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
+                                ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
+                                amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
+                                odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.-->
+                            </p>
+                        </div>
+                        <h3 style="background-color:#007fff;font:bold 20px Georgia,serif;">Reliable Services</h3>
+                        <div>
+                            <p>
+                              <!--  Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+                                purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+                                velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+                                suscipit faucibus urna.-->
+                            </p>
+                        </div>
+                        <h3 class="mb-3"style="background-color:#007fff;font:bold 20px Georgia,serif;">Great Support</h3>
+                        <div>
+                            <p>
+                               <!-- Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+                                Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+                                ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+                                lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.-->
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--test code-->
+           
+        </div>
+        <!--footer-->
+        <footer class="page-footer font-small" id="footer">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="www.pacecontechnosys.com"> Pacecon Technosys</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+    </body>
+</html>

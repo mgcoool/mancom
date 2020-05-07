@@ -1,0 +1,513 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" />
+    <style type="text/css">
+        .productbackimage
+        {
+        background-image: url("styles/image/background.jpg");
+        width:100%;
+        height: auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        }
+      #changecolor
+      {
+       color:white;
+      }
+      *{
+         box-sizing: border-box; 
+       }
+       .content:hover 
+       {
+        /*box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        box-shadow: 10px 10px 5px white;
+        transform: scale(1.2);
+        transform: scale(1.2);*/
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+       } 
+      .zoomimage
+      {
+        overflow: hidden;           
+      }
+      .zoomimage img
+      {
+       display: block;
+       transition: transform 1.6s;
+   
+      }
+        .zoomimage:hover img
+        {
+         transform: scale(1.1);
+         transform-origin: 80% 80%;
+         transform:translate3d(0);
+        }
+        .detailsservices
+        {
+            font-family:Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+
+        }
+        .btn span.glyphicon 
+        {    			
+	        opacity: 0;				
+        }
+        .btn.active span.glyphicon {				
+	        opacity: 1;				
+        }
+
+        #l
+        {
+        list-style:none;
+
+        }
+        #l:before
+        {
+        content:'✓';
+        }
+        #myservices_automation
+        {
+         box-shadow: 10px 10px 5px grey;
+        }
+        .mycursor
+        {
+            cursor:pointer;
+        }
+        .heading
+        {
+             font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+            font-stretch: expanded;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    
+    </script>
+</head>
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar  fade-show navbar-light bg-light" id="navbar">
+        <a class="navbar-brand mx-4" href="#">
+            <img src=img/imageslogo.png width="110" height="60" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto ">
+                <li class="nav-item">
+                    <a class="nav-link mx-4 h4" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-4  h4" href="aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link mx-4  h4" href="#">Services</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle mx-4  h4" href="#" id="navbardropdown" role="menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Projects
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbardropdown">
+                        <a class="dropdown-item text-justify" href="Product.aspx"><img class="pr-2" src="img/diamond5.png" height="25px" width="25px" />Diamond Cutting</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/Bangle1.jpg" height="25px" width="25px" />Bangle Design</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/dnb.png" height="25px" width="25px" />DNB</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/phmeter.png" height="25px" width="25px" />Phmeter</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/image_proc.jpg" height="25px" width="25px" />Image Processing</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/npwt.png" height="25px" width="25px" />NPWT Instrument</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/hdmi.jpg" height="25px" width="25px" />HDMI Security</a>
+                        <a class="dropdown-item text-justify" href="#"><img class="pr-2" src="img/gps.png" height="25px" width="25px" />GPS Lock</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link mx-4  h4" href="Contactus.aspx">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--Services navigation page end-->
+    <!--Services image page-->
+    <div class="container-fluid productbackimage">
+                <div class="container">
+                    <section><p class="display-4 text-center text-light heading">What We Do</p></section>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6  col-lg-4  ">
+                            <div class="content zoomimage">
+                                <img src="img/embedded.jpg" style="width:100%;height:200px;" alt="Embedded System" data-toggle="modal" data-target="#myservices" class="mycursor">
+                            </div>
+                            <h5 class="text-center text-center" id="changecolor">Embedded System</h5>
+                            <ul class="unordered list-unstyled text-center" id="changecolor">
+                                <li>Hardware</li>
+                                <li>Firmware</li>
+                                <li>Control Logic</li>
+                            </ul>
+
+                            <!--mdoal code-->
+                            <div class="modal fade" id="myservices">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color:InfoBackground;">
+                                            <h4 class="modal-title  text-success">Embedded System</h4>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                        <div class="modal-body">
+                                          <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Hardware</h3>
+                                            <p class="detailsservices text-justify text-muted">
+                                                Embedded Design Service team supports complete electronic hardware design activities which include schematic design, bill of material finalization, Printed Circuit Board (PCB) design, prototyping, production support and FPGA design services for customer-specific requirements. The key hardware design ranges from small-footprint, power-optimized solutions to high-end, rugged systems built around various embedded processors and DSPs.
+                                            </p>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Firmware</h3>
+                                            <p class="detailsservices text-justify text-muted">
+                                               Pacecon Technosys offers a broad range of software services relating to embedded systems programming and real time embedded systems software development, such as:
+                                            </p>
+                                            <!--list code-->
+                                            <div class="mylist">
+                                                <ul><li id="l">  GUI Development</li>
+                                                <li id="l">      Embedded application development</li>
+                                                <li id="l">      Firmware and Diagnostics</li>
+                                                <li id="l">      Device Drivers</li>
+                                                </ul>
+                                            </div>
+                                            <!--list code end-->
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--mdoal code end-->
+
+                        </div>
+                            
+                        <div class="col-sm-6 col-md-6  col-lg-4 ">
+                            <div class="content zoomimage">
+                                <img src="styles/image/auto.jpg" style="width:100%;height:200px;" alt="Automation" class="shrink mycursor" data-toggle="modal" data-target="#myservices_automation">
+                               </div>
+                                 <h5 class="text-center text-center" id="changecolor">Automation</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Robotics</li>
+                                    <li>AS/RS</li>
+                                    <li>Motion Control</li>
+                                </ul>
+                                <!--mdoal code-->
+                                <div class="modal fade" id="myservices_automation">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title  text-success">Automation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Robotics</h3>
+                                                <p class="detailsservices text-justify text-muted">
+                                                    Embedded Design Service team supports complete electronic hardware design activities which include schematic design, bill of material finalization, Printed Circuit Board (PCB) design, prototyping, production support and FPGA design services for customer-specific requirements. The key hardware design ranges from small-footprint, power-optimized solutions to high-end, rugged systems built around various embedded processors and DSPs.
+                                                </p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">AS/RS</h3>
+                                                <p class="detailsservices text-justify text-muted">
+                                                    Pacecon Technosys offers a broad range of software services relating to embedded systems programming and real time embedded systems software development, such as:
+                                                </p>
+
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Motion Control</h3>
+                                                <p class="detailsservices text-justify text-muted">
+                                                    Pacecon Technosys offers a broad range of software services relating to embedded systems programming and real time embedded systems software development, such as:
+                                                </p>
+
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--mdoal code end-->
+                            </div>
+                        <div class="col-sm-6 col-md-6  col-lg-4">
+                            <div class="content zoomimage">
+                                <img src="img/software1.png" style="width:100%;height:200px;" alt="Software" class="shrink mycursor" data-toggle="modal" data-target="#myservices_software">
+                               </div>
+                                 <h5 class="text-center text-center" id="changecolor">Software</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Web Application</li>
+                                    <li>ERP/MIS</li>
+                                    <li>Customize Development</li>
+                                </ul>
+                                <!--modal code start-->
+                                <div class="modal fade" id="myservices_software">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title text-success">Software</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Web Application</h3>
+                                                <p class="text-justify text-muted">web application text</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">ERP/MIS</h3>
+                                                <p class="text-justify text-muted">ERP/MIS</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Customize Development</h3>
+                                                <p class="text-justify text-muted">Customize Development</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--modal code end-->
+                            </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6  col-lg-4">
+                            <div class="content zoomimage">
+                                <img src="styles/image/app_dev1.png" style="width:100%;height:200px;" alt="Information Technology" class="shrink mycursor" data-toggle="modal" data-target="#myservices_appdevelopment">
+                               </div>
+                                 <h5 class="text-center text-center" id="changecolor">App Development</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Android App Development</li>
+                                    <li>Raspi Development</li>
+                                    <li>iOS Application</li>
+                                </ul>
+                                <!--modal code start-->
+                                <div class="modal fade" id="myservices_appdevelopment">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title text-success">App Development</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Android App Development</h3>
+                                                <p class="text-justify text-muted">Android development</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Raspi Development</h3>
+                                                <p class="text-justify text-muted">Raspi</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">iOS Application</h3>
+                                                <p class="text-justify text-muted">iOS Developement</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--modal code end-->
+                            </div>
+                       
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="content zoomimage">
+                                <img src="styles/image/app_dev2.png" style="width:100%;height:200px;" alt="Information Technology" class="mycursor" data-toggle="modal" data-target="#myservices_product">
+                              </div>
+                                  <h5 class="text-center text-center" id="changecolor">Product Development</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Concept Designation</li>
+                                    <li>Fabrication</li>
+                                    <li>Functionality Design</li>
+                                </ul>
+                                <!--modal code start-->
+                                <div class="modal fade" id="myservices_product">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title text-success">Product Development</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Concept Designation</h3>
+                                                <p class="text-justify text-muted">Android development</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Fabrication</h3>
+                                                <p class="text-justify text-muted">Raspi</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Functionality Design</h3>
+                                                <p class="text-justify text-muted">iOS Developement</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--modal code end-->
+                            </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="content zoomimage">
+                                <img src="styles/image/ins.jpg" style="width:100%;height:200px;" alt="Information Technology" class="shrink mycursor" data-toggle="modal" data-target="#myservices_ins">
+                                </div>
+                                <h5 class="text-center text-center" id="changecolor">Instrumentation</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Sensor</li>
+                                    <li>Data Logger</li>
+                                    <li>Control Philosphy</li>
+                                </ul>
+                                <!--modal code start-->
+                                <div class="modal fade" id="myservices_ins">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title text-success">Instrumentation</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Sensor</h3>
+                                                <p class="text-justify text-muted">Android development</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Data Logger</h3>
+                                                <p class="text-justify text-muted">Raspi</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Control Philosphy</h3>
+                                                <p class="text-justify text-muted">iOS Developement</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--modal code end-->
+                            </div>
+                    </div>
+                    <div class="row">
+                     
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="content zoomimage">
+                                <img src="styles/image/ai.png" style="width:100%;height:200px;" alt="Information Technology" class="mycursor" data-toggle="modal" data-target="#myservices_ai">
+                               </div>
+                                 <h5 class="text-center text-center" id="changecolor">A.I</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Face Detection</li>
+                                    <li>Neural Network</li>
+                                    <li>Visual Inspection</li>
+                                </ul>
+                                <!--modal code start-->
+                                <div class="modal fade" id="myservices_ai">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title text-success">A.I</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Face Detection</h3>
+                                                <p class="text-justify text-muted">Android development</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Neural Network</h3>
+                                                <p class="text-justify text-muted">Raspi</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Visual Inspection</h3>
+                                                <p class="text-justify text-muted">iOS Developement</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--modal code end-->
+                            </div>
+                        <div class="col-sm-6 col-md-6 col-lg-4">
+                            <div class="content zoomimage">
+                                <img src="styles/image/machine_learning.png" style="width:100%;height:200px;" alt="Information Technology" class="mycursor" data-toggle="modal" data-target="#myservices_ml">
+                              </div>
+                                  <h5 class="text-center text-center" id="changecolor">Machine Learning</h5>
+                                <ul class="unordered list-unstyled text-center" id="changecolor">
+                                    <li>Face Detection</li>
+                                    <li>Neural Network</li>
+                                    <li>Visual Inspection</li>
+                                </ul>
+                                <!--modal code start-->
+                                <div class="modal fade" id="myservices_ml">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header" style="background-color:InfoBackground;">
+                                                <h4 class="modal-title text-success">Machine Learning</h4>
+                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>Pacecon Technosys has vast experience in providing solutions to our customer to support Product life cycle with embedded design services, embedded verification and validation services and system solutions.</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Face Detection</h3>
+                                                <p class="text-justify text-muted">Android development</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Neural Network</h3>
+                                                <p class="text-justify text-muted">Raspi</p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <h3 class="text-primary" style="text-shadow:0.075em 0.08em 0.1em rgba(0, 0, 0, 1);">Visual Inspection</h3>
+                                                <p class="text-justify text-muted">iOS Developement</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--modal code end-->
+                            </div>
+                    </div>
+                </div>
+        </div>
+        <!--serivces iamge page end-->
+        <!-- Footer -->
+        <footer class="page-footer font-small  bg-light" id="footer">
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2020 Copyright:
+                <a href="www.pacecontechnosys.com"> Pacecon Technosys</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+</body>
+</html>
